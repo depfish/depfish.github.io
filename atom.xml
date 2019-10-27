@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>opscoder</title>
+  <icon>https://www.gravatar.com/avatar/ba4a4c9ed2a98e1ba0d030ca3449d4a5</icon>
+  <subtitle>个人博客</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://opscoder.com/"/>
+  <updated>2019-10-21T16:25:15.876Z</updated>
+  <id>https://opscoder.com/</id>
+  
+  <author>
+    <name>Murphy</name>
+    <email>e-mail_address</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>istio概览</title>
+    <link href="https://opscoder.com/article/istio%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://opscoder.com/article/istio学习笔记/</id>
+    <published>2019-09-23T05:57:46.000Z</published>
+    <updated>2019-10-21T16:25:15.876Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="istio-6大组件及作用">istio 6大组件及作用</h2><table><thead><tr><th>组件</th><th>作用</th></tr></thead><tbody><tr><td>Envoy</td><td>Sidecar proxies per microservice to handle ingress/egress traffic</td></tr><tr><td>Mixer</td><td>核心组件,授权、限流</td></tr><tr><td>Pilot</td><td>configuring the proxies at runtime,负责配置proxy</td></tr><tr><td>Citadel</td><td>certificate issuance and rotation，管理证书</td></tr><tr><td>Citadel Agent</td><td>A per-node component responsible for certificate issuance and rotation</td></tr><tr><td>Galley</td><td>Central component for validating, ingesting, aggregating, transforming and distributing config within Istio</td></tr></tbody></table><h2 id="istio源码结构">istio源码结构</h2><p>可以参考官方 <a href="https://github.com/istio/istio" target="_blank" rel="noopener">https://github.com/istio/istio</a> 的 Introduction部分</p><table><thead><tr><th>仓库地址</th><th>语言</th><th>模块</th></tr></thead><tbody><tr><td><a href="https://github.com/istio/istio" target="_blank" rel="noopener">https://github.com/istio/istio</a></td><td>Go</td><td>istio的主要仓库,包括大部分组件: security目录(Citadel和citadel agent), pilot,istioctl, mixer, galley, sidecar-injector等</td></tr><tr><td><a href="https://github.com/istio/api" target="_blank" rel="noopener">https://github.com/istio/api</a></td><td>Go</td><td>包含istio组件之间的API 以及资源配置定义, 使用 protobuf 进行定义</td></tr><tr><td><a href="https://github.com/istio/proxy" target="_blank" rel="noopener">https://github.com/istio/proxy</a></td><td>C++</td><td>包含 istio 使用的sidecar代理, 这个sidecar代理包含envoy和mixer client两块功能</td></tr></tbody></table><p><a href="https://github.com/istio/istio" target="_blank" rel="noopener">https://github.com/istio/istio</a> 包含的主要的镜像和命令:</p><table><thead><tr><th>容器名</th><th>镜像名</th><th>启动命令</th><th>源码入口</th></tr></thead><tbody><tr><td>Istio_init</td><td>istio/proxy_init</td><td><a href="http://istio-iptables.sh" target="_blank" rel="noopener">istio-iptables.sh</a></td><td>istio/tools/deb/istio-iptables.sh</td></tr><tr><td>istio-proxy</td><td>istio/proxyv2</td><td>pilot-agent</td><td>istio/pilot/cmd/pilot-agent</td></tr><tr><td>sidecar-injector-webhook</td><td>istio/sidecar_injector</td><td>sidecar-injector</td><td>istio/pilot/cmd/sidecar-injector</td></tr><tr><td>discovery</td><td>istio/pilot</td><td>pilot-discovery</td><td>istio/pilot/cmd/pilot-discovery</td></tr><tr><td>galley</td><td>istio/galley</td><td>galley</td><td>istio/galley/cmd/galley</td></tr><tr><td>mixer</td><td>istio/mixer</td><td>mixs</td><td>istio/mixer/cmd/mixs</td></tr><tr><td>citadel</td><td>istio/citadel</td><td>istio_ca</td><td>istio/security/cmd/istio_ca</td></tr></tbody></table><h2 id="参考">参考</h2><p><a href="https://jimmysong.io/istio-handbook/concepts/istio-architecture.html" target="_blank" rel="noopener">https://jimmysong.io/istio-handbook/concepts/istio-architecture.html</a></p><p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-istio-with-kubernetes" target="_blank" rel="noopener">https://www.digitalocean.com/community/tutorials/how-to-install-and-use-istio-with-kubernetes</a></p><p><a href="https://www.katacoda.com/courses/istio/deploy-istio-on-kubernetes,%22%E5%9C%A8%E7%BA%BF%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%22" target="_blank" rel="noopener">https://www.katacoda.com/courses/istio/deploy-istio-on-kubernetes</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;istio-6大组件及作用&quot;&gt;istio 6大组件及作用&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;组件&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Envoy&lt;/td&gt;
+&lt;td&gt;Sideca
+      
+    
+    </summary>
+    
+    
+    
+      <category term="istio" scheme="https://opscoder.com/tags/istio/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为什么要做开发</title>
+    <link href="https://opscoder.com/article/2019-08-01-why-devops/"/>
+    <id>https://opscoder.com/article/2019-08-01-why-devops/</id>
+    <published>2019-08-01T02:51:24.000Z</published>
+    <updated>2019-10-21T16:25:15.876Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="不会开发的运维不是好运维">不会开发的运维不是好运维</h3><h4 id="现状">现状</h4><p>从2011毕业到目前2019年，转眼间都干了快9年运维了。这9年也从一个懵懂骚年变成了两个孩子的爸。在为政府做事的公司体验过什么叫等级森严，在新加坡公司体验过什么叫平等尊重，在北京某公司体验什么叫加班、什么叫政治，在育碧体验过什么叫大厂…这一路经历过很多事。</p><p>毕业就去了新加坡，当时想做一名Oracle DBA，经过2年左右的努力考取了OCP。后面puppet、chef、docker陆续出现，也让运维的工作发生了革命性的变化。意识到Oracle生态的封闭，当时又恰逢去IOE浪潮，决定放弃做Oracle DBA的职业规划，拥抱开源。k8s DevOPS 让运维与开发的界限变得更模糊，也对运维提出了更高的要求，不会开发的运维不是好运维。</p><h4 id="价值">价值</h4><p>如果事情没有价值，宁愿不干，也不去做<code>无用功</code>，<code>瞎忙活</code>。<br>父母在农村务农，常说种了水稻、玉米、红薯、果树，很忙很累很辛苦。我说“每年你存了多少钱呢”，每次妈都沉默。当然父母务农客观原因有很多，虽然每次我让她放弃，她还是停不下来，这里只讨论<code>价值</code>。而事实上，父母每年务农的收益，除去种子、农药、化肥和请人干活花的钱，最后为<code>负数</code>，更不说累了一身病又要花钱去医治，好了又去干活，简直就是个恶性循环。每年我都会拿钱给父母补贴家用，才勉强收支平衡。像我父母式的务农毫无意义，根本没什么<code>价值</code>。</p><p><code>岗位价值定薪酬</code>，看是相似岗位，其实价值也不同。有个亲戚C哥在京东做快递，几个月前就听说京东要削减快递的工资，周末听老婆说C哥工资没有被消减，我很惊讶，她说只是送快递的工资被降了，“C哥是收快递的，没被降工资”。顿时感叹：<code>同样是做快递的，送快递的工资被降，收快递的没事</code>。因为收快递的是挣钱的，送快递的是花钱的，是成本。这个事我联想到了，<code>运维</code>和<code>开发</code>，<code>护士</code>和<code>医生</code>，看似相似的岗位，价值不一样的显然待遇就不一样。在很多公司同一级别，开发工资比运维工资高些，运维拿的钱少可能更苦逼，而且开发更容易<code>升值</code>。想象一下，干10年开发和干10年运维的区别，开发更容易到创业公司做到leader、架构师之类的。现实就是很多公司还是传统运维，干的还是重复性劳动，这根我父母务农有啥差别呢，在这样的职位干个10年又有多大的提升呢。<br>所以，<code>战略选择</code>比<code>战术努力</code>更重要，选好大方向走下去，比整天忙碌却看不到价值重要。</p><h4 id="机遇挑战">机遇/挑战</h4><p>现在<code>云计算</code>也让运维火起来，就像现在的前端，变成了一个体系很全面复杂的技术栈。而运维也开始了细分领域<code>大数据运维</code>、<code>人工智能运维</code>、<code>云计算运维</code>、<code>DevOPS</code>，这些也对运维提出了更高的要求。而目前(敏捷)开发、运维(SRE/DevOPS)的界限越来越模糊，运维只是一个role而不是一个身份，我也见过一个博主之前是在百度做DevOPS的后面成了去了shopee做全栈开发。其实最重要一点，就是运维要会写代码，而且要有一定水准。好几年前腾讯招前端都是按照后端的标准进行招的，现在大厂亦然，招运维按照开发的标准来招，懂运维不用说，还要懂常见的<code>算法和数据结构</code>。</p><p>如果现在不加强开发技能，后面的路越来越不好走，如果现在专职做DevOPS，提升开发技能，后面也有望做全栈开发。现在Golang也刚开始被大众所接受，大家都在一条起跑线上，公司招Golang更愿意开高价。</p><p><code>DevOPS最好前后端都要会---全栈，一般公司很少会招了DevOPS再招专门的前端来配合DevOPS，小公司更不用说了。</code> 再者，DevOPS会全栈的话，路子更宽，很方便专成专职开发，或者升成leader。</p><h4 id="发展">发展</h4><p>现在我已经铁了心，提升开发技能，要有产出。<br>目前的公司Ubisoft属于外企，很自由，有时间做自己感兴趣的事，公司也很支持，有时间去发展。不管做开发还是DevOPS，都要有自己的作品，要有产品化的思维，不然只是成千上万代码中的若干行。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;不会开发的运维不是好运维&quot;&gt;不会开发的运维不是好运维&lt;/h3&gt;
+&lt;h4 id=&quot;现状&quot;&gt;现状&lt;/h4&gt;
+&lt;p&gt;从2011毕业到目前2019年，转眼间都干了快9年运维了。这9年也从一个懵懂骚年变成了两个孩子的爸。在为政府做事的公司体验过什么叫等级森严，在新加坡公司体
+      
+    
+    </summary>
+    
+    
+    
+      <category term="devops" scheme="https://opscoder.com/tags/devops/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为啥用Markdown全静态站</title>
+    <link href="https://opscoder.com/article/2019-07-26-helloworld/"/>
+    <id>https://opscoder.com/article/2019-07-26-helloworld/</id>
+    <published>2019-07-26T02:51:24.000Z</published>
+    <updated>2019-10-21T16:25:15.876Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="新博客上线啦">新博客上线啦</h4><p>  之前一直用WP，虽然有不足之处但还可以接受，直到最近TG群里有盆友在用<code>ZeroNet</code>写博客。他在手机上也有客户端，相当于在手机上也有一份博客的镜像，写完然后同步。由于是分布式的，类似于比特币，除了他可以摧毁，其他任何人都无法破坏。后面有看了<code>IPFS 星际文件</code>，感觉还是不适合用来写博客之类的。</p><p>  直到想到Markdown全静态站 + github这一组合。既不怕删帖、也不怕毁坏，备份容易，省去了数据库/权限的麻烦。简直有种返璞归真的感觉。中途尝试了jekyll + 其他主题，直到尝试啦Hexo + 目前的主题，感觉到才是想要的，然后注册了新域名opscoder.com绑了上去。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;新博客上线啦&quot;&gt;新博客上线啦&lt;/h4&gt;
+&lt;p&gt;  之前一直用WP，虽然有不足之处但还可以接受，直到最近TG群里有盆友在用&lt;code&gt;ZeroNet&lt;/code&gt;写博客。他在手机上也有客户端，相当于在手机上也有一份博客的镜像，写完然后同步。由于是分布式的，类似于比特
+      
+    
+    </summary>
+    
+    
+    
+      <category term="新博客上线啦" scheme="https://opscoder.com/tags/%E6%96%B0%E5%8D%9A%E5%AE%A2%E4%B8%8A%E7%BA%BF%E5%95%A6/"/>
+    
+  </entry>
+  
+</feed>
