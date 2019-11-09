@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://opscoder.com/"/>
-  <updated>2019-10-21T16:25:15.876Z</updated>
+  <updated>2019-11-09T17:00:08.077Z</updated>
   <id>https://opscoder.com/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每日算法#1 leetcode#13 Roman to Integer</title>
+    <link href="https://opscoder.com/article/%E6%AF%8F%E6%97%A5%E7%AE%97%E6%B3%95-1-leetcode-13-Roman-to-Integer/"/>
+    <id>https://opscoder.com/article/每日算法-1-leetcode-13-Roman-to-Integer/</id>
+    <published>2019-11-09T16:46:18.000Z</published>
+    <updated>2019-11-09T17:00:08.077Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="罗马数字转整型">罗马数字转整型</h3><p>Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Symbol       Value</span><br><span class="line">I             1</span><br><span class="line">V             5</span><br><span class="line">X             10</span><br><span class="line">L             50</span><br><span class="line">C             100</span><br><span class="line">D             500</span><br><span class="line">M             1000</span><br></pre></td></tr></table></figure><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"><span class="comment">//IV</span></span><br><span class="line">fmt.Println(romanToInt(<span class="string">"XXVII"</span>))</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">romanToInt</span><span class="params">(s <span class="keyword">string</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">mp := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">int</span>)</span><br><span class="line">mp[<span class="string">"I"</span>] = <span class="number">1</span></span><br><span class="line">mp[<span class="string">"V"</span>] = <span class="number">5</span></span><br><span class="line">mp[<span class="string">"X"</span>] = <span class="number">10</span></span><br><span class="line">mp[<span class="string">"L"</span>] = <span class="number">50</span></span><br><span class="line">mp[<span class="string">"C"</span>] = <span class="number">100</span></span><br><span class="line">mp[<span class="string">"D"</span>] = <span class="number">500</span></span><br><span class="line">mp[<span class="string">"M"</span>] = <span class="number">1000</span></span><br><span class="line"><span class="keyword">var</span> sum <span class="keyword">int</span></span><br><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="built_in">len</span>(s); i++ &#123;</span><br><span class="line"><span class="keyword">if</span> i+<span class="number">1</span> == <span class="built_in">len</span>(s) &#123;</span><br><span class="line">sum += mp[<span class="keyword">string</span>(s[i])]</span><br><span class="line"><span class="keyword">break</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> i+<span class="number">1</span> &lt; <span class="built_in">len</span>(s) &amp;&amp; mp[<span class="keyword">string</span>(s[i])] &gt;= mp[<span class="keyword">string</span>(s[i+<span class="number">1</span>])] &#123;</span><br><span class="line">sum += mp[<span class="keyword">string</span>(s[i])]</span><br><span class="line"><span class="keyword">continue</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sum -= mp[<span class="keyword">string</span>(s[i])]</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> sum</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;罗马数字转整型&quot;&gt;罗马数字转整型&lt;/h3&gt;
+&lt;p&gt;Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.&lt;/p&gt;
+&lt;figure class=&quot;highl
+      
+    
+    </summary>
+    
+    
+    
+      <category term="算法" scheme="https://opscoder.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="leetcode" scheme="https://opscoder.com/tags/leetcode/"/>
+    
+      <category term="简单" scheme="https://opscoder.com/tags/%E7%AE%80%E5%8D%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>demo后感想</title>
+    <link href="https://opscoder.com/article/demo%E5%90%8E%E6%84%9F%E6%83%B3/"/>
+    <id>https://opscoder.com/article/demo后感想/</id>
+    <published>2019-10-31T07:28:41.000Z</published>
+    <updated>2019-11-09T16:42:16.203Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="demo完成后第一感觉是赶紧在地下挖个洞钻进去">demo完成后第一感觉是赶紧在地下挖个洞钻进去</h3><p>这是在育碧的第一次在线对着30来号人用结结巴巴的英语讲，内心慌张，久久不能平静，感觉TMD太丢人啦。</p><p>丢人是丢人，反正咱丢人也习惯啦。丢人归丢人，这次发现了自己的问题。</p><ul><li>口头表达能力</li><li>英语</li></ul><p>听蚂蚁的同事说：”要无中生有，要把你的方案安利给团队，这就需要口头表达和PPT能力。“<br>看了<a href="https://www.bilibili.com/video/av41730152/" target="_blank" rel="noopener">新东方年会吐槽的视频</a>，感触也挺深，辛辛苦苦的功劳被别人一番PPT给抢走了。</p><p>混IT难免不遇到印度同事，印度人的文档算是我见过数一数二的，而我见过的中国人文档都是马马虎虎。而口头表达能力，中国人英语非母语，也是支支吾吾，比如说我自己。</p><p>混外企，口头表达能力和英语是必备，不然前方道路艰辛。</p><h3 id="反正不怕丢人何不试下">反正不怕丢人，何不试下</h3><p>这连两对我来说都是短板，是职业发展道路上的拦路虎。不解决掉永远是个小喽罗。</p><p>现在我重新思考油管Vlog博主，他们对着那么多人口头表达如此自然，有逻辑，简要又把问题描述清楚。<br>感觉这是个锻炼表达能力的一个不错的路子，我平时也可以尝试在油管上讲解下自己熟悉的东西，比如 翻墙工具，想法…</p><p>另外一个方式，就是平时多写博客，像<a href="http://xiaohanyu.me/" target="_blank" rel="noopener">xiaohanyu.me</a>一样，感觉写作挺锻炼思路。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;demo完成后第一感觉是赶紧在地下挖个洞钻进去&quot;&gt;demo完成后第一感觉是赶紧在地下挖个洞钻进去&lt;/h3&gt;
+&lt;p&gt;这是在育碧的第一次在线对着30来号人用结结巴巴的英语讲，内心慌张，久久不能平静，感觉TMD太丢人啦。&lt;/p&gt;
+&lt;p&gt;丢人是丢人，反正咱丢人也习惯啦。丢
+      
+    
+    </summary>
+    
+    
+    
+      <category term="感想" scheme="https://opscoder.com/tags/%E6%84%9F%E6%83%B3/"/>
+    
+      <category term="demo" scheme="https://opscoder.com/tags/demo/"/>
+    
+  </entry>
   
   <entry>
     <title>istio概览</title>
