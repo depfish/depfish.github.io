@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://opscoder.com/"/>
-  <updated>2019-11-09T17:00:08.077Z</updated>
+  <updated>2019-11-11T14:48:13.876Z</updated>
   <id>https://opscoder.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每日算法#2 leetcode#14 Longest Common Prefix</title>
+    <link href="https://opscoder.com/article/%E6%AF%8F%E6%97%A5%E7%AE%97%E6%B3%95-2-leetcode-14-Longest-Common-Prefix/"/>
+    <id>https://opscoder.com/article/每日算法-2-leetcode-14-Longest-Common-Prefix/</id>
+    <published>2019-11-11T14:34:20.000Z</published>
+    <updated>2019-11-11T14:48:13.876Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="最长公共前缀">最长公共前缀</h3><p>Write a function to find the longest common prefix string amongst an array of strings.</p><p>If there is no common prefix, return an empty string “”.</p><p>Example 1:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;]</span><br><span class="line">Output: &quot;fl&quot;</span><br></pre></td></tr></table></figure><p>Example 2:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [&quot;dog&quot;,&quot;racecar&quot;,&quot;car&quot;]</span><br><span class="line">Output: &quot;&quot;</span><br></pre></td></tr></table></figure><p>Explanation: There is no common prefix among the input strings.<br>Note:</p><p>All given inputs are in lowercase letters a-z.</p><p>我的解答：</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"><span class="comment">//                0        1      2     3</span></span><br><span class="line"><span class="comment">//var strs = []string&#123;"flower", "flow", "flight"&#125;</span></span><br><span class="line"><span class="keyword">var</span> strs2 = [] <span class="keyword">string</span>&#123;<span class="string">""</span>,<span class="string">"a"</span>&#125;</span><br><span class="line"><span class="comment">//strs[0]="ggmm"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//fmt.Printf("str is %v \n",strs)</span></span><br><span class="line">fmt.Println(longestCommonPrefix(strs2))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ["dog","racecar","car"]</span></span><br><span class="line"><span class="comment">// ["abab","aba",""]</span></span><br><span class="line"><span class="comment">// ["","b"]</span></span><br><span class="line"><span class="comment">//  ["aa","a"]</span></span><br><span class="line"><span class="comment">// ["aac","acab","aa","abba","aa"]</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">longestCommonPrefix</span><span class="params">(strs []<span class="keyword">string</span>)</span> <span class="title">string</span></span> &#123;</span><br><span class="line"><span class="keyword">var</span> result <span class="keyword">string</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> maxIndex <span class="keyword">int</span></span><br><span class="line"><span class="keyword">for</span> n, str := <span class="keyword">range</span> strs &#123;</span><br><span class="line">strLen := <span class="built_in">len</span>(str)</span><br><span class="line"><span class="keyword">if</span> n == <span class="number">0</span>  &amp;&amp; strLen &gt; <span class="number">0</span>&#123;</span><br><span class="line">maxIndex = strLen - <span class="number">1</span></span><br><span class="line">result = str</span><br><span class="line"><span class="keyword">continue</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> strLen == <span class="number">0</span>  || (result[<span class="number">0</span>] != str[<span class="number">0</span>]) &#123;</span><br><span class="line">result = <span class="string">""</span></span><br><span class="line"><span class="keyword">break</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> strLen <span class="number">-1</span> &lt; maxIndex &#123;</span><br><span class="line">maxIndex = strLen <span class="number">-1</span></span><br><span class="line">result = result[:strLen]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt;= maxIndex &amp;&amp; i &lt; strLen; i++ &#123;</span><br><span class="line"><span class="keyword">if</span> result[i] != str[i] &#123;</span><br><span class="line">maxIndex=i <span class="number">-1</span></span><br><span class="line">result = result[:i]</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> result</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="/img/article/Longest_Common_Prefix.jpeg" alt="mybook"></p><p>令人高兴的是，居然打败了100%的Gopher😂</p><p>链接：<a href="https://leetcode-cn.com/problems/longest-common-prefix" target="_blank" rel="noopener">https://leetcode-cn.com/problems/longest-common-prefix</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;最长公共前缀&quot;&gt;最长公共前缀&lt;/h3&gt;
+&lt;p&gt;Write a function to find the longest common prefix string amongst an array of strings.&lt;/p&gt;
+&lt;p&gt;If there is no 
+      
+    
+    </summary>
+    
+    
+    
+      <category term="算法" scheme="https://opscoder.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="leetcode" scheme="https://opscoder.com/tags/leetcode/"/>
+    
+      <category term="简单" scheme="https://opscoder.com/tags/%E7%AE%80%E5%8D%95/"/>
+    
+  </entry>
   
   <entry>
     <title>每日算法#1 leetcode#13 Roman to Integer</title>
