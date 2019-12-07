@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://opscoder.com/"/>
-  <updated>2019-11-24T09:09:59.608Z</updated>
+  <updated>2019-12-07T12:54:27.079Z</updated>
   <id>https://opscoder.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Different SSL Cert Format</title>
+    <link href="https://opscoder.com/article/Different-SSL-Cert-Format/"/>
+    <id>https://opscoder.com/article/Different-SSL-Cert-Format/</id>
+    <published>2019-12-07T12:32:36.000Z</published>
+    <updated>2019-12-07T12:54:27.079Z</updated>
+    
+    <content type="html"><![CDATA[<p>In the world of Public Key Infrastructure (PKI) there are many different file formats. The following are the major ones.</p><ul><li>x509/PEM</li><li>pkcs#7/P7B</li><li>pkcs#12/PFX/P12</li></ul><h4 id="x509pem-format">x509/PEM Format</h4><p>The PEM format is the most common format that <strong>Certificate Authorities (CA)</strong> issue certificates in. PEM certificates usually have extentions such as <strong>.pem, .crt, .cer, and .key</strong>. They are Base64 encoded ASCII files and contain “—–BEGIN CERTIFICATE—–” and “—–END CERTIFICATE—–” statements. Server certificates, intermediate certificates, and private keys can all be put into the PEM format. But Typically the private key will contain the following “—–BEGIN RSA PRIVATE KEY—–” and “—–END RSA PRIVATE KEY —–” Statements.</p><p>Apache and other similar servers use PEM format certificates. Several PEM certificates, and even the private key, can be included in one file with each individual certificate sandwiched on top of each other, one below the other, but most platforms, such as Apache, expect the certificates and private key to be in separate files.</p><h4 id="pkcs7p7b-format">PKCS#7/P7B Format</h4><p>The PKCS#7 or P7B format is usually stored in <strong>Base64</strong> encoded ASCII format and has a file extension of <strong>.p7b</strong> or <strong>.p7c. P7B</strong> certificates usually contain the following “—–BEGIN PKCS7—–” and “—–END PKCS7—–” statements as header and footers. A P7B file only contains certificates and chain certificates, not the private key. Several platforms support P7B files including <strong>Microsoft Windows</strong> and <strong>Java Tomcat</strong>.</p><h4 id="pkcs12pfx-format">PKCS#12/PFX Format</h4><p>The PKCS#12 or PFX format is a binary format for storing the server certificate, any intermediate certificates, and the private key in one encryptable file. PFX files usually have extensions such as .pfx and .p12. PFX files are typically used on Windows machines to import and export certificates and private keys.</p><h4 id="pkcs10-format">PKCS#10 Format</h4><p>The PKCS#10 is an actual <strong>certificate signing request</strong> (also <strong>CSR</strong> or <strong>certification request</strong>) This is a message sent from an applicant to a certificate authority in order to apply for a digital identity certificate. It usually contains the public key for which the certificate should be issued, identifying information (such as a domain/common name).</p><p><strong>The more you know:</strong> Before creating a CSR, the applicant first generates a key pair, keeping the private key secret during its creation. Once the CSR has been submitted to a certificate authority an SSL Certificate will be born/issued that will only work with the private key created during CSR keypair creation.</p><h4 id="der-format">DER Format</h4><p>The DER format is simply a binary form of a certificate instead of the ASCII PEM format. It sometimes has a file extension of <strong>.der</strong> but it often has a file extension of <strong>.cer</strong> so the only way to tell the difference between a DER .cer file and a PEM .cer file is to open it in a text editor you will see a bunch of hexadecimal gibberish. All types of certificates and private keys can be encoded in DER format but is very rarely used. DER is typically used with <strong>Java platforms</strong>.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;In the world of Public Key Infrastructure (PKI) there are many different file formats. The following are the major ones.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;x50
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Think About Programming</title>
@@ -53,7 +77,7 @@
     <link href="https://opscoder.com/article/Awesome-Go-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%94%B6%E9%9B%86/"/>
     <id>https://opscoder.com/article/Awesome-Go-学习资料收集/</id>
     <published>2019-11-23T04:27:09.000Z</published>
-    <updated>2019-11-23T08:17:18.755Z</updated>
+    <updated>2019-12-07T12:34:00.151Z</updated>
     
     <content type="html"><![CDATA[<h3 id="golang-学习资料">Golang 学习资料</h3><h4 id="书必读">书(必读)</h4><table><thead><tr><th>ID</th><th>英文名</th><th>中文名</th><th>电子版</th><th>纸质版</th></tr></thead><tbody><tr><td>1</td><td>The Go Programming Lanuage</td><td>《Go语言圣经》</td><td><a href="https://books.studygolang.com/gopl-zh/" target="_blank" rel="noopener">《Go语言圣经》</a></td><td><a href="https://item.jd.com/12187988.html?cu=true&amp;utm_source=kong&amp;utm_medium=tuiguang&amp;utm_campaign=t_1001542270_1001188671_0_1932339856&amp;utm_term=7f3fb3fe773d45fe92752a9e2c549943" target="_blank" rel="noopener">京东</a></td></tr><tr><td>2</td><td>Go In Action</td><td>《Go语言实战》</td><td><a href="/pdf/Go%E8%AF%AD%E8%A8%80%E5%AE%9E%E6%88%98.pdf">Go语言实战.pdf</a></td><td><a href="https://item.jd.com/12136974.html?cu=true&amp;utm_source=kong&amp;utm_medium=tuiguang&amp;utm_campaign=t_1001542270_1001188671_0_1932339856&amp;utm_term=59a1a3c5c2ba4cc8aa9b97fa5fb163a1" target="_blank" rel="noopener">京东</a></td></tr></tbody></table><h4 id="go-web">Go Web</h4><p><a href="https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/preface.md" target="_blank" rel="noopener">build-web-application-with-golang</a></p><p><a href="/pdf/go-web-programming.pdf">go-web-programming.pdf</a></p><h4 id="uber-go编码规范">Uber Go编码规范</h4><p><a href="https://github.com/uber-go/guide" target="_blank" rel="noopener">https://github.com/uber-go/guide</a><br><a href="https://github.com/xxjwxc/uber_go_guide_cn" target="_blank" rel="noopener">https://github.com/xxjwxc/uber_go_guide_cn</a></p><h4 id="go-学习资料与社区索引">Go 学习资料与社区索引</h4><p><a href="https://github.com/Unknwon/go-study-index" target="_blank" rel="noopener">https://github.com/Unknwon/go-study-index</a></p><h4 id="go-知识图谱">Go 知识图谱</h4><p><a href="https://www.processon.com/view/link/5a9ba4c8e4b0a9d22eb3bdf0#map" target="_blank" rel="noopener">https://www.processon.com/view/link/5a9ba4c8e4b0a9d22eb3bdf0#map</a></p><h4 id="博客">博客</h4><p><a href="https://www.zhihu.com/question/30461290" target="_blank" rel="noopener">https://www.zhihu.com/question/30461290</a></p>]]></content>
     
