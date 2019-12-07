@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://opscoder.com/"/>
-  <updated>2019-12-07T12:54:27.079Z</updated>
+  <updated>2019-12-07T12:57:29.809Z</updated>
   <id>https://opscoder.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://opscoder.com/article/Different-SSL-Cert-Format/"/>
     <id>https://opscoder.com/article/Different-SSL-Cert-Format/</id>
     <published>2019-12-07T12:32:36.000Z</published>
-    <updated>2019-12-07T12:54:27.079Z</updated>
+    <updated>2019-12-07T12:57:29.809Z</updated>
     
     <content type="html"><![CDATA[<p>In the world of Public Key Infrastructure (PKI) there are many different file formats. The following are the major ones.</p><ul><li>x509/PEM</li><li>pkcs#7/P7B</li><li>pkcs#12/PFX/P12</li></ul><h4 id="x509pem-format">x509/PEM Format</h4><p>The PEM format is the most common format that <strong>Certificate Authorities (CA)</strong> issue certificates in. PEM certificates usually have extentions such as <strong>.pem, .crt, .cer, and .key</strong>. They are Base64 encoded ASCII files and contain “—–BEGIN CERTIFICATE—–” and “—–END CERTIFICATE—–” statements. Server certificates, intermediate certificates, and private keys can all be put into the PEM format. But Typically the private key will contain the following “—–BEGIN RSA PRIVATE KEY—–” and “—–END RSA PRIVATE KEY —–” Statements.</p><p>Apache and other similar servers use PEM format certificates. Several PEM certificates, and even the private key, can be included in one file with each individual certificate sandwiched on top of each other, one below the other, but most platforms, such as Apache, expect the certificates and private key to be in separate files.</p><h4 id="pkcs7p7b-format">PKCS#7/P7B Format</h4><p>The PKCS#7 or P7B format is usually stored in <strong>Base64</strong> encoded ASCII format and has a file extension of <strong>.p7b</strong> or <strong>.p7c. P7B</strong> certificates usually contain the following “—–BEGIN PKCS7—–” and “—–END PKCS7—–” statements as header and footers. A P7B file only contains certificates and chain certificates, not the private key. Several platforms support P7B files including <strong>Microsoft Windows</strong> and <strong>Java Tomcat</strong>.</p><h4 id="pkcs12pfx-format">PKCS#12/PFX Format</h4><p>The PKCS#12 or PFX format is a binary format for storing the server certificate, any intermediate certificates, and the private key in one encryptable file. PFX files usually have extensions such as .pfx and .p12. PFX files are typically used on Windows machines to import and export certificates and private keys.</p><h4 id="pkcs10-format">PKCS#10 Format</h4><p>The PKCS#10 is an actual <strong>certificate signing request</strong> (also <strong>CSR</strong> or <strong>certification request</strong>) This is a message sent from an applicant to a certificate authority in order to apply for a digital identity certificate. It usually contains the public key for which the certificate should be issued, identifying information (such as a domain/common name).</p><p><strong>The more you know:</strong> Before creating a CSR, the applicant first generates a key pair, keeping the private key secret during its creation. Once the CSR has been submitted to a certificate authority an SSL Certificate will be born/issued that will only work with the private key created during CSR keypair creation.</p><h4 id="der-format">DER Format</h4><p>The DER format is simply a binary form of a certificate instead of the ASCII PEM format. It sometimes has a file extension of <strong>.der</strong> but it often has a file extension of <strong>.cer</strong> so the only way to tell the difference between a DER .cer file and a PEM .cer file is to open it in a text editor you will see a bunch of hexadecimal gibberish. All types of certificates and private keys can be encoded in DER format but is very rarely used. DER is typically used with <strong>Java platforms</strong>.</p>]]></content>
     
@@ -37,6 +37,12 @@
     </summary>
     
     
+    
+      <category term="SSL" scheme="https://opscoder.com/tags/SSL/"/>
+    
+      <category term="Cert" scheme="https://opscoder.com/tags/Cert/"/>
+    
+      <category term="Format" scheme="https://opscoder.com/tags/Format/"/>
     
   </entry>
   
