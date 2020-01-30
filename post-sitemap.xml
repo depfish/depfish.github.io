@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://opscoder.com/article/2019-Summary-and-2020-Plan/</loc>
+        <lastmod>2020-01-30T04:05:41.837Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://opscoder.com/article/Different-SSL-Cert-Format/</loc>
         <lastmod>2019-12-07T12:57:29.809Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -71,7 +79,7 @@
     </url>
 
     <url>
-        <loc>https://opscoder.com/article/2019-08-01-why-devops/</loc>
+        <loc>https://opscoder.com/article/2019-07-26-helloworld/</loc>
         <lastmod>2019-10-21T16:25:15.876Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -79,7 +87,7 @@
     </url>
 
     <url>
-        <loc>https://opscoder.com/article/2019-07-26-helloworld/</loc>
+        <loc>https://opscoder.com/article/2019-08-01-why-devops/</loc>
         <lastmod>2019-10-21T16:25:15.876Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
