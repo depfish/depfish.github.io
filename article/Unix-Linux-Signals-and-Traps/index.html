@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-            2019 Summary and 2020 Plan - opscoder | depfish
+            Unix / Linux Signals and Traps - opscoder | depfish
                 
     </title>
 
-    <link rel="canonical" href="https://opscoder.com/article/2019-Summary-and-2020-Plan/">
+    <link rel="canonical" href="https://opscoder.com/article/Unix-Linux-Signals-and-Traps/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -70,7 +70,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('new2020.jpg')
+            background-image: url('norway_3.jpg')
             /*post*/
         
     }
@@ -87,24 +87,24 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#总结" title="总结">总结</a>
+                              <a class="tag" href="/tags/#Signal" title="Signal">Signal</a>
                             
-                              <a class="tag" href="/tags/#计划" title="计划">计划</a>
+                              <a class="tag" href="/tags/#Trap" title="Trap">Trap</a>
                             
-                              <a class="tag" href="/tags/#2019" title="2019">2019</a>
+                              <a class="tag" href="/tags/#Linux" title="Linux">Linux</a>
                             
-                              <a class="tag" href="/tags/#2020" title="2020">2020</a>
+                              <a class="tag" href="/tags/#Unix" title="Unix">Unix</a>
                             
                         </div>
-                        <h1>2019 Summary and 2020 Plan</h1>
-                        <h2 class="subheading">2019年总结与2020年计划</h2>
+                        <h1>Unix / Linux Signals and Traps</h1>
+                        <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted on
-                            2020-01-27
+                            2020-02-02
                         </span>
                         <span class="meta">
                             
-                                Updated on 2020-01-30
+                                Updated on 2020-02-02
                           
                         </span>
                     </div>
@@ -222,42 +222,138 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h3 id="2019">2019</h3>
-<p>感觉2019没有白活，有所收获。偷空学习了Golang，突然对底层数据结构和算法感兴趣啦，对此乐此不疲。雅思词汇完成了一半。</p>
-<h4 id="开年遇寒冬">开年遇寒冬</h4>
-<p>2018年下半年中美贸易开战，裁员的新闻慢慢变得多起来，自己也嗅到经济不妙。<br>
-2019 新年伊始，就收到了董事会接管公司的消息，并把成都研发中心迁到北京(其实就是把成都裁掉，在北京重新组建团队)，公司各项开支也变得紧凑起来。这样在焦虑与不安中开启了2019。突然得面临找工作，整个春节都在想找工作的事。好在公司给了N+1赔偿和几个月的时间工作交接，可以慢慢找工作。</p>
-<h4 id="偶然入育碧">偶然入育碧</h4>
-<p>整个公司同事都在找工作，我顺便投了简历，很快接到了育碧人事的电话，隔天安排了在线测试。我对测试有本能的抵触，听到了是全英文考试，顿时来了兴趣。好几年没有全英文考试过了，决定试下。边跟同事聊天，边做测试题，就这样愉快地完成了考试。又隔了一两天都收到了on site面试邀请。</p>
-<p>育碧就在马路对面，也不远，抱着锻炼下的心态，就答应了，打算过去聊聊，算是初面。很快就收到了反馈，说安排下一轮面试，由技术经理面试。听说是老外，我决心挑战下。经过一两周的等待，终于开始了面试。一看是2个老外，开场一顿寒暄，半开玩笑，不知不觉没有了紧张。</p>
-<p>周末跟几个同事在锦城公园小聚，谈论间我才知道育碧是家做游戏的跨国大公司，出了《刺客信条》等大作，之前我只知道是家外企，貌似做游戏的，没有详细了解。</p>
-<h4 id="重学golang">重学Golang</h4>
-<p>自从上家公司官宣后，日常工作几乎停止。顿时感觉如释重负，突然变得闲起来，有点不适应。同事三五成群聚集在一起侃技术，聊找工作。闲暇之余，我开始学Golang。</p>
-<p>这次我可以静心下来细细品味，Golang有啥独到之处，为啥成为云原生的首选语言。一年前初识Golang，感觉是反人类设计。<code>var</code>像JS，没有对象。现在了解的细节越多，越被Golang大道至简，高并发和工匠精神所折服。比如很多语言都有对象，而Golang没有，很多语言都有for/while/do while 循环，Golang就一个for循环搞定所有。很多语言时间格式描述一般是 <code>YY-mm-dd HH:MM:SS</code>，Golang却用 <code>2006-01-02 15:04:05</code> 来描述时间格式，这样一来，很容易记住。不少标准库函数用汇编写成，这样注定高效，比如sin,time.time。</p>
-<p>进入育碧后，工作节奏慢下来，闲暇之余我有更多的时间学习Golang。能用Golang的地方，尽量用Golang，Goodbye Python。Golang是编译型语言，写代码的时候，我开始关注底层数据结构和算法，如何让程序更加高效又省资源。也开始了Leetcode 刷题，Think in Golang(用Golang的思维来写代码).</p>
-<p>在育碧2019这一年，用Golang写了些小工具，自己用的挺嗨，老板也鼓励分享出来。</p>
-<h4 id="深入源码">深入源码</h4>
-<p>Golang的一些(标准)包，我直接看源码。测试华为云的时候，华为云的文档实在是混乱，不全。我只接从github拉 Terraform Huawei Cloud provider 源码，直接从源码里面找。K8s/Istio/V2ray/Docker 都零零碎碎看过一些源码，当然是不系统，也没能够全面理解。</p>
-<h3 id="2020">2020</h3>
-<p>总的来说，大方向不变，只作战术调整，不管工作如何变动。<br>
-给自己的定位：</p>
-<ol>
-<li>首先是一个开发者(Dev)</li>
-<li>其次是一个运维(OPS)</li>
-</ol>
-<h4 id="初心不变">初心不变</h4>
+                <p>Signals are software interrupts sent to a program to indicate that an important event has occurred. The events can vary from user requests to illegal memory access errors. Some signals, such as the interrupt signal, indicate that a user has asked the program to do something that is not in the usual flow of control.</p>
+<p>The following table lists out common signals you might encounter and want to use in your programs −</p>
+<table>
+<thead>
+<tr>
+<th>Signal Name</th>
+<th>Signal Number</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SIGHUP</td>
+<td>1</td>
+<td>Hang up detected on controlling terminal or death of controlling process</td>
+</tr>
+<tr>
+<td>SIGINT</td>
+<td>2</td>
+<td>Issued if the user sends an interrupt signal (Ctrl + C)</td>
+</tr>
+<tr>
+<td>SIGQUIT</td>
+<td>3</td>
+<td>Issued if the user sends a quit signal (Ctrl + D)</td>
+</tr>
+<tr>
+<td>SIGFPE</td>
+<td>8</td>
+<td>Issued if an illegal mathematical operation is attempted</td>
+</tr>
+<tr>
+<td>SIGKILL</td>
+<td>9</td>
+<td>If a process gets this signal it must quit immediately and will not perform any clean-up operations</td>
+</tr>
+<tr>
+<td>SIGALRM</td>
+<td>14</td>
+<td>Alarm clock signal (used for timers)</td>
+</tr>
+<tr>
+<td>SIGTERM</td>
+<td>15</td>
+<td>Software termination signal (sent by kill by default)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="list-of-signals">List of Signals</h3>
+<p>There is an easy way to list down all the signals supported by your system. Just issue the kill -l command and it would display all the supported signals −</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">kill</span> -l</span><br><span class="line"> 1) SIGHUP       2) SIGINT       3) SIGQUIT      4) SIGILL</span><br><span class="line"> 5) SIGTRAP      6) SIGABRT      7) SIGBUS       8) SIGFPE</span><br><span class="line"> 9) SIGKILL     10) SIGUSR1     11) SIGSEGV     12) SIGUSR2</span><br><span class="line">13) SIGPIPE     14) SIGALRM     15) SIGTERM     16) SIGSTKFLT</span><br><span class="line">17) SIGCHLD     18) SIGCONT     19) SIGSTOP     20) SIGTSTP</span><br><span class="line">21) SIGTTIN     22) SIGTTOU     23) SIGURG      24) SIGXCPU</span><br><span class="line">25) SIGXFSZ     26) SIGVTALRM   27) SIGPROF     28) SIGWINCH</span><br><span class="line">29) SIGIO       30) SIGPWR      31) SIGSYS      34) SIGRTMIN</span><br><span class="line">35) SIGRTMIN+1  36) SIGRTMIN+2  37) SIGRTMIN+3  38) SIGRTMIN+4</span><br><span class="line">39) SIGRTMIN+5  40) SIGRTMIN+6  41) SIGRTMIN+7  42) SIGRTMIN+8</span><br><span class="line">43) SIGRTMIN+9  44) SIGRTMIN+10 45) SIGRTMIN+11 46) SIGRTMIN+12</span><br><span class="line">47) SIGRTMIN+13 48) SIGRTMIN+14 49) SIGRTMIN+15 50) SIGRTMAX-14</span><br><span class="line">51) SIGRTMAX-13 52) SIGRTMAX-12 53) SIGRTMAX-11 54) SIGRTMAX-10</span><br><span class="line">55) SIGRTMAX-9  56) SIGRTMAX-8  57) SIGRTMAX-7  58) SIGRTMAX-6</span><br><span class="line">59) SIGRTMAX-5  60) SIGRTMAX-4  61) SIGRTMAX-3  62) SIGRTMAX-2</span><br><span class="line">63) SIGRTMAX-1  64) SIGRTMAX</span><br></pre></td></tr></table></figure>
+<p>The actual list of signals varies between Solaris, HP-UX, and Linux.</p>
+<h3 id="default-actions">Default Actions</h3>
+<p>Every signal has a default action associated with it. The default action for a signal is the action that a script or program performs when it receives a signal.<br>
+Some of the possible default actions are −</p>
 <ul>
-<li><strong>继续长期坚持每天学英语</strong>，<strong>每天进步一点点</strong>，用英语作关键词搜索，英语技术文章优先(先看英文原文，不懂再翻译成中文理解)，用英语思考。听说读写。继续学习雅思词汇。</li>
-<li><strong>继续长期坚持学Golang</strong>，<strong>每天进步一点点</strong>，可以每天看Golang面试题，看Golang技术群，勤动脑，勤动手，多写。Golang是主要编程语言。</li>
-<li><strong>继续刷题(Leetcode)</strong>，熟悉常用数据结构和算法，设计模式，Linux系统底层。</li>
-<li><strong>继续跟进云原生全家桶</strong>，k8s/Service Mesh(Istio)/Serverless(Knative)。</li>
-<li><strong>继续保持好奇心/钢铁侠/极客精神</strong></li>
+<li>Terminate the process.</li>
+<li>Ignore the signal.</li>
+<li>Dump core. This creates a file called core containing the memory image of the process when it received the signal.</li>
+<li>Stop the process.</li>
+<li>Continue a stopped process.</li>
 </ul>
-<h4 id="革命尚未成功">革命尚未成功</h4>
-<p>2019年中旬面Singapore Shopee失败，2020年1月底(大年初四)，收到面Grab的拒信。</p>
-<p>Shopee面试最后一道编程题没做出来，感觉是不难，我当时想多了。从此我意识到编程(刷题)的重要性。<br>
-Grab是2轮共2小时连在一起的，由2个人面试。第一个是Siu Ngee(新加坡女,ES专家级)，第二个是Weibin Wu(中国人,DB高级)。中国人给的反馈的结果是&quot;不错&quot;，问题估计出在Siu Ngee。跟Siu Ngee面，全程英语，可能有的技术点我没能用英语表达好，导致她以为我技术不行。她问的问题都是比较high level的，不太技术。Weibin开始我跟他聊英语，后面我就跟他讲中文了，没有沟通障碍。其实Weibin问的技术是比较深的，也比较全面。所以这次面试，吃了英语的亏。一定要从这次面试中汲取教训，<strong>英语有时比技术重要</strong>。Grab的推荐人，对我信心满满，我也挺有信心，谁知挂了！这也说明面试的不确定性，还是要广撒网，不能在一棵树上吊死，毕竟谁也无法保证一定能通过面试，尤其是大公司（小公司只要直接技术领导通过就OK了）。</p>
-<p>2019肉翻未成功，2020继续努力。。。</p>
+<h3 id="sending-signals">Sending Signals</h3>
+<p>There are several methods of delivering signals to a program or script. One of the most common is for a user to type <strong>CONTROL-C</strong> or the <strong>INTERRUPT</strong> key while a script is executing.</p>
+<p>When you press the <strong>Ctrl+C</strong> key, a <strong>SIGINT</strong> is sent to the script and as per defined default action script terminates.</p>
+<p>The other common method for delivering signals is to use the <strong>kill command</strong>, the syntax of which is as follows −</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">kill</span> -signal pid</span><br></pre></td></tr></table></figure>
+<p>Here <strong>signal</strong> is either the number or name of the signal to deliver and <strong>pid</strong> is the process ID that the signal should be sent to. For Example −</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">kill</span> -1 1001</span><br></pre></td></tr></table></figure>
+<p>The above command sends the HUP or hang-up signal to the program that is running with <strong>process ID 1001</strong>. To send a kill signal to the same process, use the following command −</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">kill</span> -9 1001</span><br></pre></td></tr></table></figure>
+<p>This kills the process running with <strong>process ID 1001</strong>.</p>
+<h3 id="trapping-signals">Trapping Signals</h3>
+<p>When you press the <strong>Ctrl+C</strong> or <strong>Break</strong> key at your terminal during execution of a shell program, normally that program is immediately terminated, and your command prompt returns. This may not always be desirable. For instance, you may end up leaving a bunch of temporary files that won’t get cleaned up.</p>
+<p>Trapping these signals is quite easy, and the trap command has the following syntax −</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">trap</span> commands signals</span><br></pre></td></tr></table></figure>
+<p>Here command can be any valid Unix command, or even a user-defined function, and signal can be a list of any number of signals you want to trap.</p>
+<p>There are two common uses for trap in shell scripts −</p>
+<ul>
+<li>Clean up temporary files</li>
+<li>Ignore signals</li>
+</ul>
+<h3 id="cleaning-up-temporary-files">Cleaning Up Temporary Files</h3>
+<p>As an example of the trap command, the following shows how you can remove some files and then exit if someone tries to abort the program from the terminal −</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">trap</span> <span class="string">"rm -f <span class="variable">$WORKDIR</span>/work1$$ <span class="variable">$WORKDIR</span>/dataout$$; exit"</span> 2</span><br></pre></td></tr></table></figure>
+<p>From the point in the shell program that this trap is executed, the two files <strong>work1$$</strong> and <strong>dataout$$</strong> will be automatically removed if signal number 2 is received by the program.</p>
+<p>Hence, if the user interrupts the execution of the program after this trap is executed, you can be assured that these two files will be cleaned up. The <strong>exit</strong> command that follows the <strong>rm</strong> is necessary because without it, the execution would continue in the program at the point that it left off when the signal was received.</p>
+<p>Signal number 1 is generated for <strong>hangup</strong>. Either someone intentionally hangs up the line or the line gets accidentally disconnected.</p>
+<p>You can modify the preceding trap to also remove the two specified files in this case by adding signal number 1 to the list of signals −</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">trap</span> <span class="string">"rm <span class="variable">$WORKDIR</span>/work1$$ <span class="variable">$WORKDIR</span>/dataout$$; exit"</span> 1 2</span><br></pre></td></tr></table></figure>
+<p>Now these files will be removed if the line gets hung up or if the <strong>Ctrl+C</strong> key gets pressed.</p>
+<p>The commands specified to trap must be enclosed in quotes, if they contain more than one command. Also note that the shell scans the command line at the time that the trap command gets executed and also when one of the listed signals is received.</p>
+<p>Thus, in the preceding example, the value of <strong>WORKDIR</strong> and <strong>$$</strong> will be substituted at the time that the trap command is executed. If you wanted this substitution to occur at the time that either signal 1 or 2 was received, you can put the commands inside single quotes −</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">trap</span> <span class="string">'rm $WORKDIR/work1$$ $WORKDIR/dataout$$; exit'</span> 1 2</span><br></pre></td></tr></table></figure>
+<h3 id="ignoring-signals">Ignoring Signals</h3>
+<p>If the command listed for trap is null, the specified signal will be ignored when received. For example, the command −</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">trap</span> <span class="string">''</span> 2</span><br></pre></td></tr></table></figure>
+<p>This specifies that the interrupt signal is to be ignored. You might want to ignore certain signals when performing an operation that you don’t want to be interrupted. You can specify multiple signals to be ignored as follows −</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">trap</span> <span class="string">''</span> 1 2 3 15</span><br></pre></td></tr></table></figure>
+<p>Note that the first argument must be specified for a signal to be ignored and is not equivalent to writing the following, which has a separate meaning of its own −</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">trap</span>  2</span><br></pre></td></tr></table></figure>
+<p>If you ignore a signal, all subshells also ignore that signal. However, if you specify an action to be taken on the receipt of a signal, all subshells will still take the default action on receipt of that signal.</p>
+<h3 id="resetting-traps">Resetting Traps</h3>
+<p>After you’ve changed the default action to be taken on receipt of a signal, you can change it back again with the trap if you simply omit the first argument; so −</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">trap</span> 1 2</span><br></pre></td></tr></table></figure>
+<p>This resets the action to be taken on the receipt of signals 1 or 2 back to the default.</p>
+<h3 id="sending-a-signal">Sending a signal</h3>
+<pre><code>The following system calls and library functions allow the caller to
+send a signal:
+
+raise(3)        Sends a signal to the calling thread.
+
+kill(2)         Sends a signal to a specified process, to all members
+                of a specified process group, or to all processes on
+                the system.
+
+killpg(3)       Sends a signal to all of the members of a specified
+                process group.
+
+pthread_kill(3) Sends a signal to a specified POSIX thread in the
+                same process as the caller.
+
+tgkill(2)       Sends a signal to a specified thread within a
+                specific process.  (This is the system call used to
+                implement pthread_kill(3).)
+
+sigqueue(3)     Sends a real-time signal with accompanying data to a
+                specified process.
+</code></pre>
+<h3 id="more">More…</h3>
+<p><a href="https://www.tutorialspoint.com/unix/unix-signals-traps.htm" target="_blank" rel="noopener">https://www.tutorialspoint.com/unix/unix-signals-traps.htm</a><br>
+<a href="http://man7.org/linux/man-pages/man7/signal.7.html" target="_blank" rel="noopener">http://man7.org/linux/man-pages/man7/signal.7.html</a></p>
 
                 
 
@@ -265,13 +361,9 @@ Grab是2轮共2小时连在一起的，由2个人面试。第一个是Siu Ngee(�
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/article/Unix-Linux-Signals-and-Traps/" data-toggle="tooltip" data-placement="top" title="Unix / Linux Signals and Traps">&larr; Previous Post</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/article/Different-SSL-Cert-Format/" data-toggle="tooltip" data-placement="top" title="Different SSL Cert Format">Next Post &rarr;</a>
+                            <a href="/article/2019-Summary-and-2020-Plan/" data-toggle="tooltip" data-placement="top" title="2019 Summary and 2020 Plan">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -331,7 +423,7 @@ Grab是2轮共2小时连在一起的，由2个人面试。第一个是Siu Ngee(�
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2019"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">2019</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#开年遇寒冬"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">&#x5F00;&#x5E74;&#x9047;&#x5BD2;&#x51AC;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#偶然入育碧"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">&#x5076;&#x7136;&#x5165;&#x80B2;&#x78A7;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#重学golang"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">&#x91CD;&#x5B66;Golang</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#深入源码"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">&#x6DF1;&#x5165;&#x6E90;&#x7801;</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2020"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2020</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#初心不变"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">&#x521D;&#x5FC3;&#x4E0D;&#x53D8;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#革命尚未成功"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">&#x9769;&#x547D;&#x5C1A;&#x672A;&#x6210;&#x529F;</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#list-of-signals"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">List of Signals</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#default-actions"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Default Actions</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#sending-signals"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Sending Signals</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#trapping-signals"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Trapping Signals</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#cleaning-up-temporary-files"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Cleaning Up Temporary Files</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ignoring-signals"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Ignoring Signals</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#resetting-traps"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">Resetting Traps</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#sending-a-signal"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">Sending a signal</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#more"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">More&#x2026;</span></a></li></ol>
         
         </div>
       </aside>
@@ -351,13 +443,13 @@ Grab是2轮共2小时连在一起的，由2个人面试。第一个是Siu Ngee(�
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#总结" title="总结">总结</a>
+                          <a class="tag" href="/tags/#Signal" title="Signal">Signal</a>
                         
-                          <a class="tag" href="/tags/#计划" title="计划">计划</a>
+                          <a class="tag" href="/tags/#Trap" title="Trap">Trap</a>
                         
-                          <a class="tag" href="/tags/#2019" title="2019">2019</a>
+                          <a class="tag" href="/tags/#Linux" title="Linux">Linux</a>
                         
-                          <a class="tag" href="/tags/#2020" title="2020">2020</a>
+                          <a class="tag" href="/tags/#Unix" title="Unix">Unix</a>
                         
                     </div>
                 </section>
@@ -386,8 +478,8 @@ Grab是2轮共2小时连在一起的，由2个人面试。第一个是Siu Ngee(�
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "opscoder";
-    var disqus_identifier = "https://opscoder.com/article/2019-Summary-and-2020-Plan/";
-    var disqus_url = "https://opscoder.com/article/2019-Summary-and-2020-Plan/";
+    var disqus_identifier = "https://opscoder.com/article/Unix-Linux-Signals-and-Traps/";
+    var disqus_url = "https://opscoder.com/article/Unix-Linux-Signals-and-Traps/";
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
